@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+    <title>PdeF | Início</title>
+    <style>
+        :root {
+            --mainBlue: #73d7ff;
+            --darkerBlue: #739fff;
+            --error: red;
+            --grey: #e0e0e0;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        body {
+            background-color: var(--grey);
+        }
+        .mainContainer {   
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-content: center;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch; 
+            flex-wrap: wrap;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .subContainer:nth-child(1) {
+            background-color: var(--darkerBlue);
+            color: white;
+        }
+        .subContainer:nth-child(1) a {
+            color: var(--darkerBlue);
+            text-decoration: none;
+            background: white;
+            border-radius: 15px;
+            --button: 10px;
+            padding: calc(var(--button)/4);
+            padding-left: var(--button);
+            padding-right: var(--button);
+        }
+        .subContainer {
+            background: white;
+            color: var(--darkerBlue);
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 300;
+        }
+        .subContainer a {
+            color: white;
+            text-decoration: none;
+            background: var(--darkerBlue);
+            border-radius: 15px;
+            --button: 10px;
+            padding: calc(var(--button)/4);
+            padding-left: var(--button);
+            padding-right: var(--button);
+            margin-top: 30px;
+        }
+        .subContainer a:hover {
+            background: white;
+            color: var(--darkerBlue);
+            outline: 2px solid var(--darkerBlue);
+        }
+        .subContainer:nth-child(1) a:hover {
+            background: var(--darkerBlue);
+            color: white;
+            outline: 2px solid white;
+        }
+
+        .pageTitle {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            color: white;
+            background: var(--darkerBlue);
+            border: 4px solid white;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="pageTitle">Plotador de Funções (PdeF)</h2>
+    <div class="mainContainer">
+        <div class="subContainer tutorial">
+                <h3 class="titulo">Tutorial</h3>
+                <br>
+                <p>
+                    Caso você ainda não saiba usar o PdeF
+                    <br>
+                    Click a baixo para iniciar o Tutorial
+                </p>
+                <a href="./tutorial.html">tutorial</a>
+        </div>
+        <div class="subContainer app">     
+                <h3 class="titulo">Inicio</h3>
+                <br>
+                <p>
+                    Já sabe como usar o PdeF?
+                    <br>
+                    Click a baixo para iniciar o App
+                </p>
+                <a href="./grafico.html">app</a>
+        </div>
+    </div>
+</body>
+</html>
