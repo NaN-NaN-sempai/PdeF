@@ -16,7 +16,11 @@
     <div class="controladores">
         <textarea id="equacao" class="ignore" spellcheck="false">x => pow(x, 3)</textarea> <label>Equação <span id="equacaoSpan"></span></label> <br><br>
         <p class="erroDisplay ignore"></p>
-        <h4>Plotador de Funções (PdeF)</h4><br><br>
+        <h4>Plotador de Funções (PdeF)</h4>
+        <br><br>
+
+        <button class="shareButton">Compartilhar Função</button>
+        <br><br>
 
         <input type="range" id="tamanho" value="25" step="1" min="2" max="50"> <label>Tamanho dos pontos</label> <br>
         <input type="range" id="resolucao" value="1" step="1" min="1" max="20"> <label>Resolução</label> <br>
@@ -44,4 +48,53 @@
 </body>
 <script src="./main.js"></script>
 <script src="./mouseMove.js"></script>
+<!-- share -->
+<script>
+    var button = document.querySelector(".shareButton");
+    button.addEventListener("click", ()=>{
+        var defaultButtonText = "Compartilhar Função";
+        var copiedInterval;
+        
+        if(navigator.share) {
+            navigator.share({
+                title: "Minhas Função: " + decodeURI(location.hash).slice(1) + " | Plotador de Funções (PdeF)",
+                text: "Plotador de Funções (PdeF)\n\nMinhas Função:\n\n" + decodeURI(location.hash).slice(1) + "\n\n",
+                url: location.href,
+            })
+            .then(() => {
+                button.innerHTML = `Compartilhado`;
+
+                clearInterval(copiedInterval);
+                copiedInterval = setTimeout(() => {
+                    button.innerHTML = defaultButtonText; 
+                }, 1500);
+            })
+            .catch((error) => console.log('Erro ao compartilhar:\n' + error));
+
+        } else {
+            alert("Seu navegador não suporta compartiplhamento :(");
+        }
+    });
+
+    addEventListener("load", ()=>{
+        if(location.hash){
+            document.getElementById("equacao").value = decodeURI(location.hash).slice(1);
+            document.getElementById("equacao").dispatchEvent(new Event("input"));
+        }
+    });
+</script>
+<!-- remover iframe content -->
+<script>
+    function inIframe () {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    if(inIframe()){
+        document.querySelector(".navegacao").remove();
+    }
+</script>
 </html>

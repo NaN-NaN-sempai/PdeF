@@ -23,8 +23,8 @@ addEventListener("mousemove", (e) => {
     xPercent = (xPercent / xZoom);
     yPercent = (yPercent / yZoom);
 
-    xPercent = xPercent.toFixed(2);
-    yPercent = -yPercent.toFixed(2);
+    xPercent = xPercent.toFixed(parseFloat(document.getElementById("deicmais").value));
+    yPercent = -yPercent.toFixed(parseFloat(document.getElementById("deicmais").value));
 
     document.querySelector(".mouseGridFollower .value").innerHTML = "x: "+xPercent+"<br>y: "+yPercent;
 });

@@ -193,3 +193,18 @@ input[type="range"]::-webkit-slider-thumb{
 .navegacao a {
     text-decoration: none;
 }
+
+.shareButton {
+    color: black;
+    background: white;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+.shareButton:hover {
+    color: black;
+    background: var(--mainBlue);
+}
+.shareButton:active {
+    color: var(--mainBlue);
+    background: black;
+}

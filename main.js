@@ -82,6 +82,9 @@ var funcao_padrao = x => Math.pow(x, 3);
 document.getElementById("equacao").addEventListener("input", () => {
     var equacao = document.getElementById("equacao");
     var span = document.getElementById("equacaoSpan");
+
+    location.hash = encodeURI(equacao.value);
+
     if(equacao.value.length < 5){
         equacao.value = "x => ";
     }
@@ -114,6 +117,7 @@ document.getElementById("yZoom").addEventListener("input", reiniciar);
 document.getElementById("xZoom").addEventListener("input", reiniciar);
 document.getElementById("intervaloI").addEventListener("input", reiniciar);
 document.getElementById("intervaloF").addEventListener("input", reiniciar);
+document.getElementById("deicmais").addEventListener("input", reiniciar);
 window.addEventListener("resize", reiniciar);
 
 executar_funcao(funcao_padrao);
