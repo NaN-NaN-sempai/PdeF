@@ -186,6 +186,7 @@ input[type="range"]::-webkit-slider-thumb{
     right: 10px;
     bottom: 10px; 
     color: var(--darkerBlue);
+    box-shadow: 0 10px 10px rgb(121, 121, 121);
 }
 .navegacao a:visited {
     color: var(--darkerBlue);
