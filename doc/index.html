@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../icon.png">
-    <title>PdeF | Tutorial</title>
+    <title>PdeF | Documentação</title>
     <style>
         :root {
             --mainBlue: #73d7ff;
@@ -144,7 +144,7 @@
             <div class="button"></div>
         </div>
         <div class="title">
-        Tutorial
+            Documentação
         </div>
         <a class="title graficoLink" href="../app">
         PdeF
@@ -186,11 +186,11 @@
             O PdeF pode ser acessado por <a href="../app">esse link</a> ou clicando no titulo superior direito dessa página.
             <br>
             <br>
-            Ele pode ser usado no formato de <a href="https://www.w3schools.com/tags/tag_iframe.ASP" target="blank">IFRAME</a> como demonstrado abaixo: <br><br>
+            Ele tambem pode ser usado no formato de <a href="https://www.w3schools.com/tags/tag_iframe.ASP" target="blank">IFRAME</a> como demonstrado abaixo: <br><br>
             <iframe src="../app"> </iframe>
             <br>
             <br>
-            Algumas imagens a baixo:
+            Algumas imagens abaixo:
             <br>
             <br>
             Ex1:
@@ -293,7 +293,7 @@
                 <h3>Calculos Matemáticos</h3> 
                 Você tambem pode executar operações matematicas simples como Soma, Multiplicação, Divisão, Subtração e misturar todas em uma conta mais complexa.
                 <br>
-                Observer os exemplos abaixo:
+                Observe os exemplos abaixo:
                 <br>
                 <br>
                 Ex1:
@@ -476,7 +476,7 @@
             <br>
             <h3>História do PdeF</h3>
             <br>
-            O PdeF foi criado em 2019 como um projeto para a matéria Matemática Aplicada do curso de Licenciatura em Ciência da Computação no IF Baiano - Senhor do Bonfim.
+            O PdeF foi criado em 2019 como um projeto para a matéria Matemática Aplicada do curso de <a href="https://www.ifbaiano.edu.br/unidades/bonfim/licenciatura-em-ciencias-da-computacao/" target="blank">Licenciatura em Ciência da Computação</a> no <a href="https://www.ifbaiano.edu.br/unidades/bonfim/" target="blank">Instituto Federal de Educação, Ciência e Tecnologia Baiano (IF Baiano) - Senhor do Bonfim</a>.
             <br>
             <br>
             Todas as atualizações do projeto foram catalogadas no portifólio pessoal de <a href="https://nan-nan-sempai.github.io/pt/" target="blank">Luís Henque de Almeida</a> e versões anteriores ainda estão disponíveis para testes.
@@ -492,10 +492,10 @@
             <br>
             <br>
             <br>
-            <h3>Criadores</h3>
+            <h3>Desenvolvedores</h3>
             <br>
             <a href="https://github.com/NaN-NaN-sempai" target="blank"><h4>Luís Henrique de Almeida</h4></a>
-            (Criador)
+            (Criador, Designer & Coordenador Geral)
             <br>
             <br>
             <a href="https://github.com/Marckhos" target="blank"><h4>Marcos Santos de Souza</h4></a>
@@ -503,7 +503,7 @@
             <br>
             <br>
             <a href="https://www.instagram.com/jfmelo70/" target="blank"><h4>Joaquim Francisco Melo Lucio dos Santos</h4></a>
-            (Colaborador)
+            (Colaborador, Documentação)
             
             `
         }
@@ -517,10 +517,10 @@
             var find = contents.find(e=>e.title==selectedContent);
             if(!find){
                 html = '<h2 style="text-align: center;">Não encontramos este artigo :(</h2>';
-                name = "PdeF | Tutorial | Artigo não encontrado :(";
+                name = "PdeF | Documentação | Artigo não encontrado :(";
             } else {
                 html = find.html;
-                name = "PdeF | Tutorial | "+find.name;
+                name = "PdeF | Documentação | "+find.name;
             }
         } else {
             return document.location = "#introducao";
