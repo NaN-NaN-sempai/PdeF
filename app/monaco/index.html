@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <base href="../">
     <link rel="icon" type="image/x-icon" href="../icon.png">
     <title>PdeF | Plotador de Funções</title>
     <link rel="stylesheet" href="./style.css">
-
-    <!-- monaco Css -->
-    <link rel="stylesheet" data-name="vs/editor/editor.main" href="./scripts/monaco_editor/min/vs/editor/editor.main.css">
 
 </head>
 <body>
@@ -55,9 +53,9 @@
 
 
 <!-- monaco Js -->
-<script src="./scripts/monaco_editor/min/vs/loader.js"></script>
+<script src="./monaco/scripts/monaco_editor/min/vs/loader.js"></script>
 <script>
-    require.config({ paths: { 'vs': './scripts/monaco_editor/min/vs' }});
+    require.config({ paths: { 'vs': './monaco/scripts/monaco_editor/min/vs' }});
 
     var monacoElement = document.getElementById('monacoContainer');
     
@@ -104,7 +102,7 @@
 <!-- monaco Js -->
 
 
-<script src="./main.js"></script>
+<script src="./monaco/main.js"></script>
 <script src="./mouseMove.js"></script>
 
 

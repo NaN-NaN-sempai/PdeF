@@ -80,13 +80,13 @@
     border-radius: 20px;
     opacity: .8;
 }
-.controladores *:not(.ignore) {
+.controladores *:not(.ignore):not(.ignore *) {
     display: none;
 }
 .controladores:hover {
     opacity: 1;
 }
-.controladores:hover > * {
+.controladores:hover > *:not(.ignore):not(.ignore *) {
     display: inline;
 }
 
@@ -98,11 +98,20 @@
     border-radius: 10px;
 }
 
+.controladores .monacoContainer {          
+    width: 200px;
+    height: 40px;
+    outline: solid black 1px;
+    resize: both;
+    border-radius: 10px 10px 5px 10px;
+    overflow: hidden;
+}
+
 input[type="number"]{ 
     border-radius: 10px;
     border: 1px solid black;
     width: 50px;
-} 
+}
 
 
 input[type="range"]{
